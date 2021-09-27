@@ -1,6 +1,6 @@
 // Animation Timeline
 function bounceSound() {
-  const mp3 = new Audio("http://soundbible.com/grab.php?id=1898&type=mp3");
+  const mp3 = new Audio("http://www.hscripts.com/tutorials/html/music.wav");
   mp3.play();
 }
 const animationTimeline = () => {
@@ -34,7 +34,8 @@ const animationTimeline = () => {
 
   tl
     .to(".container", 0.1, {
-      visibility: "visible"
+      visibility: "visible",
+      onStart: bounceSound
     })
     .from(".one", 0.7, {
       opacity: 0,
@@ -179,7 +180,6 @@ const animationTimeline = () => {
       {
         opacity: 0.9,
         y: 1400,
-        onStart: bounceSound
       },
       {
         opacity: 1,
