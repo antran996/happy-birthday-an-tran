@@ -167,7 +167,9 @@ const animationTimeline = () => {
         scale: 3,
         opacity: 0,
         rotation: -15,
-        ease: Expo.easeOut
+        ease: Expo.easeOut,
+      onStart:function(){audioplay.play()},
+      onComplete:function(){audioplay.pause()}
       },
       0.2,
       "+=1"
