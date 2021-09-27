@@ -1,8 +1,5 @@
 // Animation Timeline
-function bounceSound() {
-  const mp3 = new Audio("http://www.hscripts.com/tutorials/html/music.wav");
-  mp3.play();
-}
+
 const animationTimeline = () => {
   // Spit chars that needs to be animated individually
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
@@ -31,7 +28,10 @@ const animationTimeline = () => {
   };
 
   const tl = new TimelineMax();
-
+  function bounceSound() {
+  const mp3 = new Audio("http://www.hscripts.com/tutorials/html/music.wav");
+  mp3.play();
+}
   tl
     .to(".container", 0.1, {
       visibility: "visible",
