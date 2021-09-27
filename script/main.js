@@ -1,4 +1,8 @@
 // Animation Timeline
+function bounceSound() {
+  const mp3 = new Audio("http://soundbible.com/grab.php?id=1898&type=mp3");
+  mp3.play();
+}
 const animationTimeline = () => {
   // Spit chars that needs to be animated individually
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
@@ -174,7 +178,8 @@ const animationTimeline = () => {
       2.5,
       {
         opacity: 0.9,
-        y: 1400
+        y: 1400,
+        onStart: bounceSound
       },
       {
         opacity: 1,
