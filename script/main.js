@@ -29,8 +29,6 @@ const animationTimeline = () => {
   };
 
   const tl = new TimelineMax();
-  var audioplay = document.createElement('audio');
-  audioplay.setAttribute('src', 'http://www.hscripts.com/tutorials/html/music.wav');
   tl
     .to(".container", 0.1, {
       visibility: "visible"
@@ -167,9 +165,7 @@ const animationTimeline = () => {
         scale: 3,
         opacity: 0,
         rotation: -15,
-        ease: Expo.easeOut,
-      onStart:function(){audioplay.play()},
-      onComplete:function(){audioplay.pause()}
+        ease: Expo.easeOut
       },
       0.2,
       "+=1"
@@ -203,9 +199,7 @@ const animationTimeline = () => {
       x: -150,
       y: 400,
       rotation: -180,
-      opacity: 0,
-      onStart:function(){audioplay.play()},
-      onComplete:function(){audioplay.pause()}
+      opacity: 0
     })
     .staggerFrom(
       ".wish-hbd span",
