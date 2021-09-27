@@ -1,4 +1,6 @@
 // Animation Timeline
+var audioplay = document.createElement('audio');
+        audioplay.setAttribute('src', 'http://www.hscripts.com/tutorials/html/music.wav');
 
 const animationTimeline = () => {
   // Spit chars that needs to be animated individually
@@ -28,14 +30,12 @@ const animationTimeline = () => {
   };
 
   const tl = new TimelineMax();
-  function bounceSound() {
-  const mp3 = new Audio("http://www.hscripts.com/tutorials/html/music.wav");
-  mp3.play();
-}
+
   tl
     .to(".container", 0.1, {
       visibility: "visible",
-      onStart: bounceSound
+      onStart:function(){audioplay.play()},
+      onComplete:function(){audioplay.pause()}
     })
     .from(".one", 0.7, {
       opacity: 0,
