@@ -177,9 +177,7 @@ const animationTimeline = () => {
       2.5,
       {
         opacity: 0.9,
-        y: 1400,
-        onStart:function(){audioplay.play()},
-        onComplete:function(){audioplay.pause()}
+        y: 1400
       },
       {
         opacity: 1,
@@ -195,7 +193,9 @@ const animationTimeline = () => {
         opacity: 0,
         x: 25,
         y: -25,
-        rotationZ: -45
+        rotationZ: -45,
+        onStart:function(){audioplay.play()},
+        onComplete:function(){audioplay.pause()}
       },
       "-=2"
     )
