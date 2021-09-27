@@ -1,6 +1,5 @@
 // Animation Timeline
-var audioplay = document.createElement('audio');
-        audioplay.setAttribute('src', 'http://www.hscripts.com/tutorials/html/music.wav');
+
 
 const animationTimeline = () => {
   // Spit chars that needs to be animated individually
@@ -30,7 +29,8 @@ const animationTimeline = () => {
   };
 
   const tl = new TimelineMax();
-
+  var audioplay = document.createElement('audio');
+  audioplay.setAttribute('src', 'http://www.hscripts.com/tutorials/html/music.wav');
   tl
     .to(".container", 0.1, {
       visibility: "visible",
