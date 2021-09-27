@@ -193,9 +193,7 @@ const animationTimeline = () => {
         opacity: 0,
         x: 25,
         y: -25,
-        rotationZ: -45,
-        onStart:function(){audioplay.play()},
-        onComplete:function(){audioplay.pause()}
+        rotationZ: -45
       },
       "-=2"
     )
@@ -203,7 +201,9 @@ const animationTimeline = () => {
       x: -150,
       y: 400,
       rotation: -180,
-      opacity: 0
+      opacity: 0,
+      onStart:function(){audioplay.play()},
+      onComplete:function(){audioplay.pause()}
     })
     .staggerFrom(
       ".wish-hbd span",
