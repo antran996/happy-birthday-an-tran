@@ -33,9 +33,7 @@ const animationTimeline = () => {
   audioplay.setAttribute('src', 'http://www.hscripts.com/tutorials/html/music.wav');
   tl
     .to(".container", 0.1, {
-      visibility: "visible",
-      onStart:function(){audioplay.play()},
-      onComplete:function(){audioplay.pause()}
+      visibility: "visible"
     })
     .from(".one", 0.7, {
       opacity: 0,
@@ -180,6 +178,8 @@ const animationTimeline = () => {
       {
         opacity: 0.9,
         y: 1400,
+        onStart:function(){audioplay.play()},
+        onComplete:function(){audioplay.pause()}
       },
       {
         opacity: 1,
