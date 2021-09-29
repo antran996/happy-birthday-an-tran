@@ -1,11 +1,7 @@
 // Animation Timeline
-var audioplay = document.createElement('audio');
-        audioplay.setAttribute('src', 'img/hpbd_song.mp3');
-
-TweenMax.to(".container",71,{
-    onStart:function(){audioplay.play()},
-    onComplete:function(){audioplay.pause()}
-})
+window.onload = function() {
+    document.getElementById("my_audio").play();
+}
 
 const animationTimeline = () => {
   // Spit chars that needs to be animated individually
