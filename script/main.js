@@ -1,8 +1,8 @@
 // Animation Timeline
 var audioplay = document.createElement('audio');
-        audioplay.setAttribute('src', 'http://www.hscripts.com/tutorials/html/music.wav');
+        audioplay.setAttribute('src', 'img/hpbd_song.mp3');
 
-TweenMax.to(".container",5,{x:200,
+TweenMax.to(".container",5,{
     onStart:function(){audioplay.play()},
     onComplete:function(){audioplay.pause()}
 })
