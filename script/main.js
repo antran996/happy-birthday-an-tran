@@ -272,7 +272,7 @@ function playTL(){
     document.getElementById("button").style.display = "none";
     playing = true;
     tl.progress(0).play();
-    var audio = document.getElementById("audio");
+    var audio = document.getElementById("my_audio");
     audio.play();
   }};
   // tl.seek("currentStep");
