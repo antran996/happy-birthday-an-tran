@@ -1,5 +1,11 @@
 // Animation Timeline
+var audioplay = document.createElement('audio');
+        audioplay.setAttribute('src', 'http://www.hscripts.com/tutorials/html/music.wav');
 
+TweenMax.to(".container",5,{x:200,
+    onStart:function(){audioplay.play()},
+    onComplete:function(){audioplay.pause()}
+})
 
 const animationTimeline = () => {
   // Spit chars that needs to be animated individually
