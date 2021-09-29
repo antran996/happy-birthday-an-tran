@@ -29,8 +29,8 @@ const animationTimeline = () => {
     rotationY: 5,
     skewX: "-15deg"
   };
-
-  const tl = new TimelineMax();
+  var playing = false;
+  tl = new TimelineMax({paused: true, onComplete: function(){ playing = false;} });
   tl
     .to(".container", 0.1, {
       visibility: "visible"
@@ -268,7 +268,16 @@ const animationTimeline = () => {
       },
       "+=1"
     );
+document.getElementById("button").addEventListener("click", playTL );
 
+function playTL(){
+  if( !playing ){
+    document.getElementById("button").style.display = "none";
+    playing = true;
+    tl.progress(0).play();
+    var audio = document.getElementById("audio");
+    audio.play();
+  }};
   // tl.seek("currentStep");
   // tl.timeScale(2);
 
