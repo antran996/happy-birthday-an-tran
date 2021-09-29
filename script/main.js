@@ -1,7 +1,4 @@
 // Animation Timeline
-window.onload = function() {
-    document.getElementById("my_audio").play();
-}
 
 const animationTimeline = () => {
   // Spit chars that needs to be animated individually
